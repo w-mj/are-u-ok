@@ -30,6 +30,7 @@ class MailNotifier(Notifier):
         return message
 
     def send(self, subject: str, content: str):
+        print("send {}".format(subject))
         try:
             svr = smtplib.SMTP()
             svr.connect(self._host)
